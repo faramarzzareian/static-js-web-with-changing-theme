@@ -1,0 +1,14 @@
+:root{
+    --mainColor:#1d1d1d;
+    --secondaryColor: rgb(128, 127, 127);
+    --mainText:rgb(255, 255, 255);
+    --secondaryText: white;
+    --borderColor:#ffffff;
+    --rightcolor: rgb(255, 255, 255);
+    --themeDotBorder:#ffffff;
+    --rightcolordark:rgb(0, 0, 0);
+    --titlecolor:rgb(255, 255, 255);
+    --linkscolor:#ffffff;
+}
+
+ 

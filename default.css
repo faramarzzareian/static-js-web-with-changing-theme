@@ -1,0 +1,281 @@
+:root{
+    --mainColor:#cac8c8;
+    --secondaryColor: rgb(218, 218, 218);
+    --mainText:black;
+    --secondaryText: #45156;
+    --borderColor:#ffffff;
+    --rightcolor: black;
+    --themeDotBorder:#d3d3d3;
+    --rightcolordark:black;
+    --titlecolor:rgb(255, 255, 255);
+    --linkscolor:rgba(255, 255, 255, 0.973);
+}
+
+
+
+
+
+
+html , body {
+    padding: 0;
+    margin: 0;
+
+}
+body *{
+    transition: 0.3s;
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+color: var(--mainText);
+font-family: 'Roboto Mono', monospace;
+font-weight: 900;
+}
+
+p,li,span,label, input,textarea {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+ul{
+    list-style: none;
+}
+h1 {font-size: 56px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 16px;}
+
+
+
+
+
+
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+
+}
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow: auto;
+}
+
+
+.greeting-wrapper{
+    display: grid;
+    text-align: center; 
+    align-content: center;
+     
+    min-height: 10em;
+
+}
+
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border:2px solid var(--borderColor);
+    -webkit-box-shadow: 7px 7px 13px 0px rgba(0,0,0, 0.75);
+    -moz-box-shadow:    7px 7px 13px 0px rgba(0,0,0, 0.75);
+    box-shadow:         7px 7px 13px 0px rgba(0,0,0, 0.75);
+    display: grid;
+border-radius: 5px 5px 0 0;
+
+
+    grid-template-columns: 1fr 1fr ;
+    
+    grid-template-areas:
+    'nav-wrapper nav-wrapper'
+    'left-column right-column'
+    ;
+}
+
+
+
+.nav-wrapper{
+    border-bottom: 2px solid var(--borderColor);
+    grid-area:nav-wrapper;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #5a5b5c;
+     border-radius: 5px 5px 0 0;
+}
+
+#navigation{
+    color:white;
+    margin: 0;
+    padding: 10px;
+}
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+    }
+
+#dot-1{
+        background-color: #fc6058;
+    }
+#dot-2{
+        background-color: #fec02f;
+    }
+#dot-3{
+        background-color: #2aca3e;
+    }
+
+
+.browser-dot{
+    background-color: white;
+height: 15px;
+width: 15px;
+border-radius: 50%;
+margin: 5px;
+
+}
+
+
+.left-column{
+    grid-area:left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#profile-pic{
+
+    display: block;
+    margin:0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border:2px solid var(--borderColor);
+}
+
+
+.theme-dot:hover{
+    border-width:5px;
+}
+ 
+#light-mode{
+    background-color: #fff;
+}
+#dark-mode{
+background-color: #24292e;
+}
+
+#setting-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+#theme-option-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:white;
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(48, 50, 50, 0.75);
+-moz-box-shadow:    3px 3px 7px 0px rgba(48, 50, 50, 0.75);
+box-shadow:         3px 3px 7px 0px rgba(48, 50, 50, 0.75);
+}
+
+
+
+
+
+
+
+
+
+
+.right-column{
+    grid-area:right-column;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    
+}
+
+#right-column{
+   
+background-color:var(--rightcolordark);
+display: block;
+    margin:0 ;
+    height: 270px;
+    width: 450px;
+    object-fit: cover;
+    
+    border: 20px solid;
+    border-radius: 15px;
+}
+
+#right-column h5,h3{
+    color:var(--titlecolor);
+    text-align: center;
+    
+}
+ 
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 90%;
+    }
+}
+
+
+.about-wrapper{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+padding-bottom: 50px;
+padding-top: 50px;
+gap:100px;
+
+
+}
+.about-me #resumelink{
+    text-decoration: underline;
+    color:red;
+}
+.about-me h4{
+    color:var(--rightcolor);
+    font-family: 'EB Garamond', serif;
+
+    font-family: 'Roboto Mono', monospace;
+ 
+}
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #9fc44b;
+}
+#social-img{
+    width: 80%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-links a,h3{
+    color:var(--linkscolor);
+}
+.social-links{
+    font-family: 'EB Garamond', serif;
+
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
